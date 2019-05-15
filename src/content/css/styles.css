@@ -1,0 +1,292 @@
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0.9);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0.9);
+    -webkit-transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+html,
+body {
+  background-color: #6441a4 !important;
+}
+.container {
+  position: relative;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+.header .logo {
+  display: block;
+  width: 150px;
+  height: 55px;
+  background-image: url('../images/twitch_head.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto 20px auto;
+}
+.header .input {
+  width: 100%;
+  margin: 0 15px;
+}
+.header .input .ui.dropdown {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 0 25px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  background-color: #503280;
+}
+.header .input .ui.dropdown .text {
+  font-family: 'Roboto';
+  font-weight: 200;
+  font-size: 14px;
+  color: white;
+}
+.header .input .ui.dropdown.active .text {
+  color: #6441a4 !important;
+  font-weight: normal !important;
+}
+.header .input .default {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../images/search.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+  background-position-x: 15px;
+}
+.header .input input {
+  height: 40px;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 0 5px 0 45px;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 800;
+  opacity: 0.9;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../images/search.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+  background-position-x: 15px;
+}
+.header .input input:focus {
+  opacity: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('../images/search.png');
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: center;
+  background-position-x: 15px;
+}
+.header.center {
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+.empty {
+  display: block;
+  width: 100%;
+  height: 300px;
+  margin: 15% 0;
+  background-image: url('../images/twitch_one.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+  -webkit-animation: sk-bounce 4s infinite ease-in-out;
+  animation: sk-bounce 4s infinite ease-in-out;
+}
+.streams span.results {
+  position: relative;
+  display: block;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+.streams .card {
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.streams .card .viewers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  margin: 5px;
+  padding: 0 10px;
+  background-color: #6441a4;
+  border-radius: 3px;
+}
+.streams .card .image img {
+  width: 100%;
+}
+.streams .card .content {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 10px;
+}
+.streams .card .content .banner img {
+  width: 45px;
+  height: 45px;
+  border-radius: 3px;
+  box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.14), 0 3px 20px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.streams .card .content .info {
+  height: auto;
+  min-height: 45px;
+  padding: 0 10px;
+}
+.streams .card .content .info span {
+  display: block;
+  font-family: 'Roboto';
+  font-weight: 300;
+  color: #444;
+  font-size: 12px;
+}
+.streams .card .content .info span.player {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  padding-right: 5px;
+  color: #6441a4;
+}
+.streams .card .content .info span.game {
+  font-size: 14px;
+  line-height: 24px;
+}
+a:focus,
+a:hover {
+  text-decoration: none !important;
+}
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 99%;
+}
+.error {
+  display: block;
+  padding: 10px 15px;
+}
+.error span {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+}
+/*#region -- STREAMING  */
+.streaming {
+  position: relative;
+  overflow: hidden;
+  margin: 15px 0;
+  border-radius: 4px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  background-color: #F2F2F2;
+}
+.streaming .details {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 15px;
+}
+.streaming .details img {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 3px;
+  box-shadow: 0 8px 15px 1px rgba(0, 0, 0, 0.14), 0 3px 20px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+.streaming .details button {
+  background: none;
+  border: none;
+  font-family: 'Roboto';
+  font-size: 16px;
+  color: #6441a4;
+  outline: none;
+}
+.streaming .details .description {
+  width: 90%;
+  min-height: 60px;
+  padding: 5px 10px;
+  overflow: hidden;
+}
+.streaming .details .description span {
+  display: block;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 16px;
+}
+.streaming .details .description span.player {
+  font-size: 18px;
+  line-height: 18px;
+  color: #6441a4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 99%;
+}
+.streaming .details .description span.viewers {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 14px;
+  color: #ca3433;
+  font-weight: 800;
+  padding: 0 0 0 10px;
+}
+.streaming .details .description span.title {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 5px 0 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 99%;
+}
+/*#endregion*/
+@media (max-width: 768px) {
+  .header .input {
+    margin: 0;
+  }
+  .header .input input {
+    width: 65%;
+    padding: 0 0 0 35px;
+    background-size: 16px 16px;
+    background-position-x: 10px;
+  }
+  .header .input input:focus {
+    background-size: 16px 16px;
+    background-position-x: 10px;
+  }
+  .header .input .ui.dropdown {
+    padding: 0 10px;
+  }
+}
