@@ -54,7 +54,7 @@ class Stream extends React.Component{
                 }}
         />
 		<div className="details">
-            <img src={banner}></img>
+            <img src={banner} alt=""></img>
 			<div className="description">
                 <span className="player">{displayName}
 					<span className="viewers">{viewers} watching now!</span>
