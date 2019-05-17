@@ -24,7 +24,7 @@ class Streams extends React.Component{
                     <Image src={stream.preview.medium} wrapped ui={false} />
                     <div className="content">
                         <div className="banner">
-                            <img src={stream.channel.logo}></img>
+                            <img src={stream.channel.logo} alt=""></img>
                         </div>
                         <div className="info">
                             <span>
