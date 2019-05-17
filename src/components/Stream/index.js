@@ -1,6 +1,6 @@
 import { getStream } from '../../utils';
 import { Embed } from 'semantic-ui-react';
-import React, {Component, Fragment} from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 class Stream extends React.Component{
