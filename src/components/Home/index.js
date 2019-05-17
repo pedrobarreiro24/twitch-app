@@ -1,4 +1,4 @@
-import React, {Component, Fragment} from 'react';
+import React, { Fragment } from 'react';
 import Search from './Search';
 import Streams from './Streams';
 
