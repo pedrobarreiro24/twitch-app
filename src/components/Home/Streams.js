@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import React, {Component, Fragment} from 'react';
-import {Image } from 'semantic-ui-react'
+import React, { Fragment } from 'react';
+import { Image } from 'semantic-ui-react'
 
 class Streams extends React.Component{
 
