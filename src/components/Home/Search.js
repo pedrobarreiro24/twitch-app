@@ -1,6 +1,6 @@
-import React, {Component, Fragment} from 'react';
-import {Input, Dropdown} from 'semantic-ui-react';
-import {fetchStreams} from '../../utils';
+import React, { Fragment } from 'react';
+import { Input, Dropdown } from 'semantic-ui-react';
+import { fetchStreams } from '../../utils';
 import _ from 'lodash';
 import Status from './Status';
 import { Link } from 'react-router-dom';
