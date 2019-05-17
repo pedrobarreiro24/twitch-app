@@ -1,6 +1,5 @@
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import React, {Fragment} from 'react';
-import {ThemeProvider, createGlobalStyle} from 'styled-components';
+import React, { Fragment } from 'react';
 import Home from './components/Home';
 import Stream from './components/Stream';
 import '../src/content/css/styles.css';
