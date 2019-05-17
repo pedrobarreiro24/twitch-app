@@ -24,7 +24,6 @@ Installation guide:
             - URL - http://localhost:3000/
             - Category - Website Integration
     - Copy Client ID and paste in REACT_APP_CLIENT_ID="yourID" inside .env file
-    - Restart application
 
 - Run
     - yarn start or npm start
